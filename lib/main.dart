@@ -336,7 +336,7 @@ class RouteTimelinePage extends StatelessWidget {
     {"time": "08:00 AM", "stop": "Aluva"},
     {"time": "12:30 PM", "stop": "Pulinchodu"},
     {"time": "01:00 PM", "stop": "Companypady"},
-    {"time": "01:15 PM", "stop": "Ambattukavu"},
+    {"time": "01:15 PM", "stop": "Ambattukavu Airport"},
     {"time": "01:30 PM", "stop": "Muttom"},
     {"time": "01:45 PM", "stop": "Kalamaserry"},
     {"time": "02:00 PM", "stop": "Cusat"},
@@ -346,7 +346,8 @@ class RouteTimelinePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(surfaceTintColor: Colors.white,backgroundColor: Colors.white,iconTheme: IconThemeData(color:Colors.green),),
+    return Scaffold(appBar: AppBar(surfaceTintColor: Colors.white,backgroundColor: Colors.white,iconTheme: IconThemeData(color: Color(0xFF3B8B01),
+    ),),
       body: Container(
         color: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 16, ),
@@ -369,7 +370,7 @@ class RouteTimelinePage extends StatelessWidget {
                 _OverviewCard(
                   icon: Icons.directions_bus,
                   iconColor: Colors.green,
-                  title: 'Downtown Express',
+                  title: 'Downtown Express ',
                   subtitle: 'Route 22',
                 ),
                 SizedBox(height: 12),
@@ -420,7 +421,7 @@ class RouteTimelinePage extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 14,
                             color: Colors.black54,
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'Montserrat',fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -428,7 +429,7 @@ class RouteTimelinePage extends StatelessWidget {
 
                     // DOT + LINE (green, with padding)
                     indicatorBuilder: (_, __) =>
-                    const DotIndicator(color: Colors.green, size: 16),
+                    const DotIndicator(color: Color(0xFF3B8B01), size: 16),
                     connectorBuilder: (context, index, connectorType) {
                       final topGap =
                       connectorType == ConnectorType.start ? 0.0 : 10.0;
@@ -437,7 +438,7 @@ class RouteTimelinePage extends StatelessWidget {
                       return Padding(
                         padding:
                         EdgeInsets.only(top: topGap, bottom: bottomGap),
-                        child: const SolidLineConnector(color: Colors.green,space: 50,),
+                        child: const SolidLineConnector(color:Color(0xFF3B8B01),space: 50,),
                       );
                     },
 
@@ -502,7 +503,7 @@ class _OverviewCard extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Color(0xFF9EEE10),
               borderRadius: BorderRadius.circular(6),
             ),
             padding: const EdgeInsets.all(8),
@@ -518,7 +519,7 @@ class _OverviewCard extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.black87,
                     fontSize: 16,
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'Montserrat',fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -527,7 +528,7 @@ class _OverviewCard extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.black54,
                     fontSize: 14,
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'Segoe_UI',fontWeight: FontWeight.w500,
                   ),
                 ),
               ],
